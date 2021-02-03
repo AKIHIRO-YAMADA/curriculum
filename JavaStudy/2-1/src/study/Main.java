@@ -16,23 +16,12 @@ public class Main {
 	        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 	        //③ arr 配列をループさせ、isOdd関数を使って配列の要素が奇数かどうかの判定を行いなさい。
 	        //   要素が奇数の場合には「nは奇数です。」と出力されます。
-	        isOdd();
 	        for (int i = 0; i < arr.length; i++) {
-	        	System.out.println();
-	        	}
+	        isOdd(i);
+	        if(i % 2 != 0){
 	        }
-			static void isOdd() {
-				for (int num = 0; num < 10; num++) {
-					if (num % 2 == 1) {
-						System.out.println();
-					}
-					}
-			}
-
-
-
-
-
+	        }
+	}
 	    //② 関数を定義しなさい。
 	    //   関数名：getName
 	    //  修飾子：public
@@ -41,15 +30,12 @@ public class Main {
 			public static String getName(String firstName, String lastName) {
 				return firstName + lastName;
 			}
-
-
-
 	    //奇数の判定を行う。
-	    public static void isOdd(int num) {
-	      if(num % 2 != 0) {
+			public static void isOdd(int num) {
+				if(num % 2 != 0) {
 	        System.out.println(num + "は奇数です。");
 	        }
 
-	}
+			}
 
 }
