@@ -7,7 +7,6 @@ public class Check {
 	//なお、変数のアクセス修飾子は「private」とする。
 	 private String firstName = "山田";
 	 private String lastName = "晃大";
-
 	 private void printName() {
 		 System.out.println("printNameメソッド　→　" + printName(firstName, lastName));
 	 }
