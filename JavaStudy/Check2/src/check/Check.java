@@ -8,23 +8,24 @@ public class Check {
 	 private String firstName = "山田";
 	 private String lastName = "晃大";
 
-	 protected void setName() {
+	 private void printName() {
 		 System.out.println("printNameメソッド　→　" + printName(firstName, lastName));
+	 }
+	//②Check.java】にてfirstNameとlastNameを引数で受け取って、
+			//連結して表示させるメソッド「printName」を作成しなさい。
+			//作成した関数のアクセス修飾子は「private」とする。
+	 private static String printName(String firstName, String lastName) {
+			return firstName + lastName;
 	 }
 
 	public static void main(String[] args) {
+
 		Check a = new Check();
-		a.setName();
+		a.printName();
 	//③【Check.java】にてPetクラスとRobotPetクラスをインスタンス化して、下記の完成イメージを出力させなさい。
 		Pet pet = new Pet(Constants.CHECK_CLASS_JAVA,Constants.CHECK_CLASS_HOGE);
 		 pet.introduce();
 		 RobotPet robotPet = new RobotPet(Constants.CHECK_CLASS_R2D2,Constants.CHECK_CLASS_LUKE);
 		 robotPet.introduce();
 	}
-		//②Check.java】にてfirstNameとlastNameを引数で受け取って、
-		//連結して表示させるメソッド「printName」を作成しなさい。
-		//作成した関数のアクセス修飾子は「private」とする。
-		 private static String printName(String firstName, String lastName) {
-				return firstName + lastName;
-		 }
 }
