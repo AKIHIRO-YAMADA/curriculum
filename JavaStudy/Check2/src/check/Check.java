@@ -8,11 +8,14 @@ public class Check {
 	 private String firstName = "山田";
 	 private String lastName = "晃大";
 
-	 public void test() {
+	 protected void setName() {
 		 System.out.println("printNameメソッド　→　" + printName(firstName, lastName));
 	 }
 
 	public static void main(String[] args) {
+		Check a = new Check();
+		a.setName();
+	//③【Check.java】にてPetクラスとRobotPetクラスをインスタンス化して、下記の完成イメージを出力させなさい。
 		Pet pet = new Pet(Constants.CHECK_CLASS_JAVA,Constants.CHECK_CLASS_HOGE);
 		 pet.introduce();
 		 RobotPet robotPet = new RobotPet(Constants.CHECK_CLASS_R2D2,Constants.CHECK_CLASS_LUKE);
