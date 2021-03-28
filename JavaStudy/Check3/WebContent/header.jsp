@@ -5,10 +5,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>header</title>
 </head>
 <body>
-  <div class="date1">
+  <div>
 	<% Date date = new Date();
 	   SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
 	   String formatDate = sdf.format(date);%>
