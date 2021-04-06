@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="/Check3/css/style.css">
 </head>
 <body>
-	<jsp:include page="header.jsp" flush="true" />
+	<%@ include file="header.jsp"%>
 	<!-- name、idの入力エリアを作成しなさい -->
 	<div class="main">
 	  <table>
@@ -23,6 +23,6 @@
 	    </tr>
 	   </table>
 	 </div>
-	<jsp:include page="footer.jsp" flush="true" />
+	<%@ include file="footer.jsp"%>
 </body>
 </html>
