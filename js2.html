@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ホームページの見た目を変える2</title>
+    <script>
+        function changeCss(){
+            // 余白
+            document.getElementById("message").style.padding = "24px";
+            // フォントサイズ
+            document.getElementById("message").style.fontSize = "48px";
+            // 背景色
+            document.getElementById("message").style.backgroundColor = "#dddddd";
+            // 文字色
+            document.getElementById("message").style.color = "deeppink";
+            // 枠の丸み具合
+            document.getElementById("message").style.borderRadius = "20px";
+        }
+    </script>
+</head>
+<body id="bd">
+    <h1>ホームページの見た目を変える2</h1>
+    <p id="message">文字を表示します</p>
+    <p>
+        <input type="button" value="変更する" onclick="changeCss()">
+    </p>
+</body>
+</html>

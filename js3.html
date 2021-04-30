@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ホームページの見た目を変える</title>
+    <script>
+        function changeColor(){
+            // テキストボックスの文字列を取得
+            var color = document.getElementById("color").value;
+            // 背景色を変更
+            document.getElementById("bd").style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body id="bd">
+    <h1>ホームページの見た目を変える</h1>
+    <p>
+        <input type="text" id="color" size="20" placeholder="例）red, #ffcc00...">
+        <input type="button" value="変更" onclick="changeColor()">
+    </p>
+</body>
+</html>
