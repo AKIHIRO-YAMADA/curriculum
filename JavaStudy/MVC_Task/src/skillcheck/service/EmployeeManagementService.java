@@ -182,6 +182,7 @@ public final class EmployeeManagementService extends BaseService implements Empl
                 Logger.log(new Throwable(), "SQL: " +  sbQuery.toString());
                 break;
             case FIND_BY_EMPID:
+            	
 
                 // FIXME Step-5-4: pEmployeeBeanListの「1件目の要素のみ」から社員情報を取得しなさい。
                 // Tips1: ループ文を使用すること（正解は複数パターンあります）
@@ -202,7 +203,7 @@ public final class EmployeeManagementService extends BaseService implements Empl
                     // [ここへ記述]
                     preparedStatement = connection.prepareStatement(ConstSQL.SELECT_BY_EMPID);
                     preparedStatement.setString(1,name);
-                    preparedStatement.setString(2, id);
+                    preparedStatement.setString(2, empId);
 
                     // LIKEを使用するため、パラメータを編集
                     final String empId = ExecuteCase.FIND_BY_EMPID_WITH_LIKE.equals(eCase)
