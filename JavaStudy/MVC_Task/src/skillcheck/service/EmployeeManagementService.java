@@ -182,14 +182,15 @@ public final class EmployeeManagementService extends BaseService implements Empl
                 Logger.log(new Throwable(), "SQL: " +  sbQuery.toString());
                 break;
             case FIND_BY_EMPID:
-            	
 
                 // FIXME Step-5-4: pEmployeeBeanListの「1件目の要素のみ」から社員情報を取得しなさい。
                 // Tips1: ループ文を使用すること（正解は複数パターンあります）
                 // Tips2: 格納先はローカル変数のempとすること
                 // [ここへ記述]
-
-
+            	EmployeeBean employeebean = pEmployeeBeanList.stream().findFirst().orElse(null);
+            	 for (int i = 0; i < 1 ; i++) {
+            		 System.out.println(emp);
+                 }
 
                 if (Objects.nonNull(emp)) {
                     Logger.log(new Throwable(), "pEmployeeBeanList[0].empId = " + emp.getEmpId());
@@ -202,8 +203,6 @@ public final class EmployeeManagementService extends BaseService implements Empl
                     // Tips: sbQueryは、sbQuery.toString()でStringへ変換
                     // [ここへ記述]
                     preparedStatement = connection.prepareStatement(ConstSQL.SELECT_BY_EMPID);
-                    preparedStatement.setString(1,name);
-                    preparedStatement.setString(2, empId);
 
                     // LIKEを使用するため、パラメータを編集
                     final String empId = ExecuteCase.FIND_BY_EMPID_WITH_LIKE.equals(eCase)
@@ -213,9 +212,16 @@ public final class EmployeeManagementService extends BaseService implements Empl
                     // FIXME Step-5-6: preparedStatementに適切なパラメーターをセットしなさい。
                     // Tips: パラメータをセットするインデックスに注意
                     // [ここへ記述]
+                    preparedStatement.setString(1,empId);
+                    preparedStatement.setString(2, "0");
+
+
+
 
                     // FIXME Step-5-7: preparedStatementよりSQL(SELECT文)を実行し、resultSetへ結果を格納しなさい。
                     // [ここへ記述]
+                    resultSet = preparedStatement.executeQuery();
+
 
                     Logger.log(new Throwable(), "SQL: " +  this.preparedStatement.toString());
                 }
