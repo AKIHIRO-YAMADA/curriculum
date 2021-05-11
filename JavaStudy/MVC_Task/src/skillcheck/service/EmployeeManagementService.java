@@ -187,9 +187,8 @@ public final class EmployeeManagementService extends BaseService implements Empl
                 // Tips1: ループ文を使用すること（正解は複数パターンあります）
                 // Tips2: 格納先はローカル変数のempとすること
                 // [ここへ記述]
-            	EmployeeBean employeebean = pEmployeeBeanList.stream().findFirst().orElse(null);
             	 for (int i = 0; i < 1 ; i++) {
-            		 System.out.println(emp);
+            		 emp = pEmployeeBeanList.get(i);
                  }
 
                 if (Objects.nonNull(emp)) {
@@ -213,7 +212,7 @@ public final class EmployeeManagementService extends BaseService implements Empl
                     // Tips: パラメータをセットするインデックスに注意
                     // [ここへ記述]
                     preparedStatement.setString(1,empId);
-                    preparedStatement.setString(2, "0");
+                    //preparedStatement.setString(2, "0");
 
 
 

@@ -47,7 +47,7 @@
     <br>
     <% if (requestStatus < 2 && !message.isEmpty()) { %>
         <!-- FIXME Step-2-2: 式（Expression）を用いてメッセージ（message）を表示しなさい。 -->
-        <p>[ここへ記述]</p>
+        <p><%= message %></p>
     <% } %>
     <% if (!empResultList.isEmpty()) { %>
     <div class="div-table-list">
