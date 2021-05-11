@@ -172,7 +172,6 @@ public final class EmployeeManagementService extends BaseService implements Empl
 
         // クエリ用文字列を連結させて作成
         sbQuery.append(ConstSQL.SELECT_BASE);
-
         try {
             // 「全件検索」以外の場合は、条件クエリを追加する
             switch (eCase) {
@@ -211,11 +210,7 @@ public final class EmployeeManagementService extends BaseService implements Empl
                     // FIXME Step-5-6: preparedStatementに適切なパラメーターをセットしなさい。
                     // Tips: パラメータをセットするインデックスに注意
                     // [ここへ記述]
-                    preparedStatement.setString(1,empId);
-                    //preparedStatement.setString(2, "0");
-
-
-
+                    preparedStatement.setString(1, empId);
 
                     // FIXME Step-5-7: preparedStatementよりSQL(SELECT文)を実行し、resultSetへ結果を格納しなさい。
                     // [ここへ記述]
