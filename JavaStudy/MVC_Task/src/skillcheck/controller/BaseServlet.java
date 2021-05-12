@@ -153,7 +153,7 @@ public abstract class BaseServlet extends HttpServlet {
         	EmployeeBean bean = new EmployeeBean();
         	bean.setEmpId(reqEmpId);
         	bean.setPassword(reqPassword);
-        	responseBean = ems.getEmployeeData(ExecuteCase.FIND_BY_EMPID,bean);
+        	responseBean = ems.getEmployeeData(ExecuteCase.FIND_BY_EMPID, bean);
         	//request.setAttribute("responseBean", responseBean);
 
 
