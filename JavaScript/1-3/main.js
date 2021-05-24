@@ -9,8 +9,9 @@ let x = 10;
 if (x >= 10 && x <= 20){
     console.log("成功です");
 }
-else
+else{
 console.log("失敗です");
+}
 
 //問３
 let y = 0;
