@@ -4,15 +4,21 @@
     <meta charset="utf-8">
     <title>ホームページの見た目を変える</title>
     <script>
-        function changeColor(){
-            document.getElementById("bd").style.backgroundColor = "skyblue";
-        }
+        function createBtn() {
+    let item = document.createElement('li');
+    item.textContent = 'item';
+    let ul = document.querySelector('ul');
+    ul.appendChild(item);
+}
+
     </script>
 </head>
-<body id="bd">
-    <h1>ホームページの見た目を変える1</h1>
-    <p>
-        <input type="button" value="見た目を変える" onclick="changeColor()">
-    </p>
+<body>
+    <input type="button" value="クリック" onclick="createBtn()">
+    <ul>
+        <li>item</li>
+        <li>item</li>
+    </ul>
+    <script src="js/main.js"></script>
 </body>
 </html>
