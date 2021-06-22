@@ -13,13 +13,13 @@
     </style>
 </head>
 <body>
-    <div id="box"></div>
+    <div id="box" onClick="changeColor()"></div>
     <script>
         //問題①：idで要素を取得して、背景色を赤色に変更する処理を記述してください。
         function changeColor(){
-            document.getElementById("box").style.backgroundColor = "red";
+           var obj = document.getElementById("box");
+           obj.style.backgroundColor = '#ff0000';
         }
-        console.log(changeColor());
     </script>
     
 </body>

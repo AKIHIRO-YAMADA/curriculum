@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        th, td {
+            padding : 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <form id="select_lang">
+    <select onchange="changeLang()" name="lang">
+        <option id="select">選択してください</option>
+        <option id="selected_jpn">日本語</option>
+        <option id="selected_en">English</option>
+        <option id="selected_all">全て表示</option>
+    </select>
+    </form>
+    
+    <table>
+        <tr id="jpn" class="lang">
+            <th>日本</th>
+            <td>こんにちは</td>
+            <td>ありがとう</td>
+            <td>さようなら</td>
+        </tr>
+        <tr id="en" class="lang">
+            <th>English</th>
+            <td>Hello</td>
+            <td>Thank you</td>
+            <td>Good Bye</td>
+        </tr>
+    </table>
+
+    <script>
+        document.getElementById("jpn").style.display ="none";
+        document.getElementById("en").style.display ="none";
+        //①onchangeで使用されている関数の中身を実装してください。
+        //if文を使う、選ばれた言語のを表示させる変数を指定する
+        function changeLang() {
+            let jpn = document.querySelector('#jpn');
+            let en = document.querySelector('#en');
+            let all = document.querySelectorAll('.lang');
+            let lang =document.getElementById('select_lang').lang.options[select_lang.lang.selectedIndex].id;
+                
+            if(lang==="selected_jpn"){
+                    en.style.display ="none";
+                    jpn.style.display ="block";
+	        }else if (lang==="selected_en"){
+                    jpn.style.display ="none";
+		            en.style.display ="block";
+            }else if (lang==="selected_all"){
+                    jpn.style.display ="block";
+                    en.style.display ="block";
+            }else{
+                    jpn.style.display ="none";
+                    en.style.display ="none";
+            }
+        }
+
+    </script>
+</body>
+</html>
