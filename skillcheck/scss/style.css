@@ -1,0 +1,74 @@
+@charset "UTF-8";
+.wrapper {
+  padding-top: 73px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .nav {
+  list-style: none;
+}
+
+.header .nav .nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 30px;
+}
+
+main .main-image {
+  text-align: center;
+  width: 100%;
+}
+
+main .word1 {
+  text-align: center;
+  font-size: 40px;
+  line-height: 200%;
+}
+
+main .word2 {
+  text-align: center;
+  line-height: 300%;
+}
+
+main .word3 {
+  text-align: center;
+  line-height: 300%;
+}
+
+main .back-image1 {
+  height: 500px;
+  background-image: url(images/長方形1.png);
+  background-repeat: no-repeat;
+}
+
+main .about-title {
+  font-size: 100px;
+  text-align: center;
+}
+
+main .word4 {
+  text-align: center;
+}
+
+main .word5 {
+  text-align: center;
+  font-size: 30px;
+}
+
+main .ex-pori {
+  width: 40%;
+}
+
+main .sanpuzu {
+  width: 40%;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+}
+/*# sourceMappingURL=style.css.map */

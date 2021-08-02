@@ -1,0 +1,56 @@
+.wrapper {
+    padding-top: 73px;
+}
+.header {
+    display: flex;
+    .nav {
+        list-style: none;
+        .nav-item {
+            display: flex;
+            right:30px;
+        }
+    }
+}
+main {
+    .main-image{
+        text-align: center;
+        width: 100%;
+    }
+    .word1{
+        text-align: center;
+        font-size: 40px;
+        line-height:200%;
+    }
+    .word2{
+        text-align: center;
+        line-height:300%;
+    }
+    .word3{
+        text-align: center;
+        line-height:300%;
+    }
+    .back-image1{
+        height: 500px;
+        background-image: url(images/長方形1.png);
+        background-repeat: no-repeat;
+    }
+    .about-title {
+        font-size:100px;
+        text-align: center;
+    }
+    .word4{
+        text-align: center;
+    }
+    .word5{
+        text-align: center;
+        font-size: 30px;
+    }
+    .ex-pori{
+        width:40%;
+    }
+    .sanpuzu{
+        width:40%;
+        align-items: right;
+    }
+}
+

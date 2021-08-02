@@ -22,15 +22,15 @@ var app = new Vue({
     computed: {
     isNotDoneToDos () {
         return this.list.filter((todo) => {
-          return !todo.isChecked;
+        return !todo.isChecked;
         });
-      },
-      isDoneToDos () {
+    },
+    isDoneToDos () {
         return this.list.filter((todo) => {
-          return todo.isChecked;
+        return todo.isChecked;
         });
-      },
-      filteredList: function() {
+    },
+    filteredList: function() {
 
         var findlist = [];
 

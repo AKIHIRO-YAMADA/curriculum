@@ -1,0 +1,509 @@
+/* ーーーーーーーーーーーーー */
+/* メイン */
+/* ーーーーーーーーーーーーー */
+
+body {
+  font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: .8px;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #1ca9e3;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  border-style: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+/*--------------------------------
+ レイアウト
+---------------------------------*/
+.wrapper {
+  padding-top: 73px;
+}
+
+.section {
+  padding: 90px 0;
+}
+
+/* TODO:01
+  ・セクションの奇数番目にのみ背景色「#f7f7f7」
+*/
+.section:nth-of-type(odd) {
+  background-color: #f7f7f7;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 95%;
+  padding: 0 40px;
+}
+
+/*--------------------------------
+ 見出し
+---------------------------------*/
+.title {
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: .05em;
+  color: #333;
+}
+
+.lead {
+  margin-bottom: 30px;
+}
+
+/*--------------------------------
+ヘッダー
+---------------------------------*/
+/* FIXME:01
+  ・幅「100％」
+  ・背景色「#F2F2F2」
+  ・区切り線「2px solid #000」
+  ・画面上部にヘッダーを固定
+*/
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #F2F2F2;
+  border-bottom: 2px solid #000;
+}
+
+/* FIXME:02
+  ・ヘッダーの要素を横並びに指定
+  ・上下中央揃え
+  ・左右均等揃え（先頭と末尾の要素は端に寄せる）
+*/
+.header .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.header-logo {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-right: 20px;
+  letter-spacing: .05em;
+}
+
+.header-logo a {
+  color: #333;
+}
+
+/* FIXME:03
+  ・ナビゲーションバーの要素を横並びに指定
+*/
+.header-nav-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-nav-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.header-nav-item a {
+  position: relative;
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 0;
+  transition: .3s;
+  letter-spacing: .05em;
+  color: #333;
+}
+
+/* TODO:02
+  ・ナビゲーションの要素にカーソルを合わせるとアンダーラインを表示
+*/
+.header-nav-item a:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  content: "";
+  transition: .3s;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #333;
+}
+
+.header-nav-item a:hover:after {
+  width: 100%;
+}
+
+/*--------------------------------
+ FV（ファーストビュー）
+---------------------------------*/
+/* FIXME:04
+  ・タイトル（サブタイトル）を上下左右中央揃え
+  ・高さをビューポートの85％
+  ・サブタイトルを中央揃え
+*/
+.fv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+  text-align: center;
+}
+
+.fv-inner {
+  padding: 0 40px;
+}
+
+.fv-title {
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  letter-spacing: .1em;
+}
+.fv-subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 40px;
+  letter-spacing: .08em;
+}
+
+/*--------------------------------
+ About
+---------------------------------*/
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.profile-img {
+  width: 20%;
+  margin-right: 30px;
+  border-radius: 50%;
+}
+
+/* FIXME:05
+  ・画像を丸に変更
+*/
+.profile-img img {
+  border-radius: 50%;
+}
+.profile-body {
+  flex: 1;
+}
+
+/* FIXME:06
+  ・紹介文の段落について、最後の段落以外に「下側のマージン30px」を指定
+*/
+.profile-body p:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+/*--------------------------------
+ Skill
+---------------------------------*/
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -50px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 48%;
+  margin-bottom: 50px;
+}
+
+.skill-img {
+  width: 60px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.skill-body {
+  flex: 1;
+}
+
+.skill-name {
+  margin-bottom: 3px;
+}
+
+/* TODO:03
+  ・アニメーション付きのスキルバー
+*/
+/* スキル全体を囲うdiv */
+.skill {
+  margin-top: 10px; /* 上のマージンを指定 */
+}
+
+/* スキルの情報 */
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* スキルの熟練度（パーセンテージ） */
+.skill-percentage {
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+
+/* スキルバーの親要素 */
+.skill-bar-container {
+  position: relative;
+  width: 100%;
+  height: 35px; /* スキルバーの高さ */
+  background-color: #f3f3f3; /* スキルバーの背景色 */
+  overflow: hidden;
+}
+
+/* スキルバー本体 */
+.skill-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0; /* 初期状態では0 */
+  background-color: #34e8d7; /* スキルバーの色 */
+  transition: width 3s cubic-bezier(0.22, 1, 0.36, 1); /* スキルバーが伸びる速度を調整 */
+}
+
+/*--------------------------------
+ products
+---------------------------------*/
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -40px;
+}
+
+.products-item {
+  width: 31.74603%;
+  margin-right: 1.58730%;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.products-item:hover {
+  opacity: .9;
+}
+
+.products-item:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.products-img img {
+  border: 1px solid #e6e6e6;
+}
+
+.products-name {
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.products-info {
+  font-size: 10px;
+}
+
+/*--------------------------------
+ Contact
+---------------------------------*/
+.contact {
+  text-align: center;
+}
+
+.contact-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.contact-text {
+  margin-top: 10px;
+}
+/*--------------------------------
+ ページトップ
+---------------------------------*/
+.page-top {
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #4c4c4c;
+}
+
+.page-top .material-icons-outlined {
+  vertical-align: bottom;
+  color: #fff;
+}
+
+/*--------------------------------
+ フッター
+---------------------------------*/
+.footer {
+  padding: 30px;
+  background-color: #333;
+}
+
+.copyright {
+  font-size: 10px;
+  text-align: center;
+  color: #797979;
+}
+
+
+/*media Queries 767
+----------------------------------------------------*/
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .pc-only {
+    display: none;
+  }
+
+  .sp-only {
+    display: block;
+  }
+
+  /* 見出し */
+  .title {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  /* レイアウト */
+  .wrapper {
+    padding-top: 57px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .inner {
+    padding: 0 20px;
+  }
+
+  /* ヘッダー */
+  .header .inner {
+    padding: 15px;
+  }
+
+  .header-logo {
+    font-size: 15px;
+    margin-right: 15px;
+  }
+
+  .header-nav-item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .header-nav-item a {
+    font-size: 10px;
+  }
+
+  .header-nav-item a:after {
+    display: none;
+  }
+
+  /*  メインビジュアル */
+  .fv {
+    height: 75vh;
+  }
+
+  .fv-inner {
+    padding: 0 20px;
+  }
+
+  .fv-title {
+    font-size: 30px;
+  }
+  .fv-subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  /* products */
+  .products-name {
+    font-size: 10px;
+  }
+
+  .products-list {
+    justify-content: space-between;
+  }
+
+  .products-item {
+    flex: 0 0 48%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  /* Skill */
+  .skill-list {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .skill-item {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  .skill-item:last-child {
+    margin-bottom: 0;
+  }
+
+  /* About */
+  .profile {
+    display: block;
+  }
+  .profile-img {
+    width: 150px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+
+  .profile-body p:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  /* フッター */
+  .footer {
+    padding: 20px;
+  }
+
+  /* 下層ページ */
+  .article {
+    padding: 50px 0;
+    width: 100px;
+  }
+}
