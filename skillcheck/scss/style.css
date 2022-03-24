@@ -7,9 +7,17 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header .logo {
+  display: block;
 }
 
 .header .nav {
+  text-align: center;
   list-style: none;
 }
 
@@ -42,8 +50,7 @@ main .word3 {
 }
 
 main .back-image1 {
-  height: 500px;
-  background-image: url(images/長方形1.png);
+  background-image: url("/Users/yamadaakihiro/GitHub/curriculum/skillcheck/images/長方形1.png");
   background-repeat: no-repeat;
 }
 
@@ -61,14 +68,109 @@ main .word5 {
   font-size: 30px;
 }
 
-main .ex-pori {
-  width: 40%;
+main .ab1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 main .sanpuzu {
-  width: 40%;
-  -webkit-box-align: right;
-      -ms-flex-align: right;
-          align-items: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20%;
+  margin-right: 30px;
+}
+
+main .word6 {
+  text-align: center;
+  font-size: 30px;
+}
+
+main .ab2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+main .hikaku {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20%;
+  margin-right: 30px;
+}
+
+main .word7 {
+  text-align: center;
+  font-size: 30px;
+}
+
+main .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+main .t1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+main .t2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+main .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+main .t3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+main .t4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 500px;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */

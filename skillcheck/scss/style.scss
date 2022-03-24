@@ -2,8 +2,15 @@
     padding-top: 73px;
 }
 .header {
-    display: flex;
+    display:flex;
+    width:900px;
+    margin-left: auto;
+    margin-right: auto;
+    .logo{
+        display:block;
+    }
     .nav {
+        text-align: center;
         list-style: none;
         .nav-item {
             display: flex;
@@ -30,8 +37,7 @@ main {
         line-height:300%;
     }
     .back-image1{
-        height: 500px;
-        background-image: url(images/長方形1.png);
+        background-image: url("/Users/yamadaakihiro/GitHub/curriculum/skillcheck/images/長方形1.png");
         background-repeat: no-repeat;
     }
     .about-title {
@@ -45,12 +51,74 @@ main {
         text-align: center;
         font-size: 30px;
     }
-    .ex-pori{
-        width:40%;
+    .ab1 {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        margin: 0 auto;
     }
-    .sanpuzu{
-        width:40%;
-        align-items: right;
+    .sanpuzu {
+        display: flex;
+        width:20%;
+        margin-right: 30px;
+        
     }
+    .word6{
+        text-align: center;
+        font-size: 30px;
+    }
+    .ab2 {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .hikaku {
+        display: flex;
+        width:20%;
+        margin-right: 30px;
+        
+    }
+    .word7{
+        text-align: center;
+        font-size: 30px;
+    }
+    .top {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .t1 {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .t2 {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .bottom {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .t3 {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .t4 {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
 }
 
